@@ -4,6 +4,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.labwork55.dto.UserDto;
 import org.example.labwork55.service.QuizResultService;
+import org.example.labwork55.service.StatisticsService;
 import org.example.labwork55.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,8 @@ import java.util.Map;
 public class UserController {
     private final UserService userService;
     private final QuizResultService quizResultService;
+    private final StatisticsService statisticsService;
+
 
     @PostMapping("/api/register")
     public ResponseEntity<?> registerUser(@RequestBody @Valid UserDto userDto) {
@@ -34,20 +37,14 @@ public class UserController {
     @GetMapping("/api/users/{userId}/statistics")
     public ResponseEntity<?> getUserStatistics(@PathVariable String userId, Principal principal) {
         if (!principal.getName().equals(userId)) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(Map.of("error", "Access denied"));
         }
 
         try {
-            var results = quizResultService.getResultsByUserEmail(userId);
-            Map<String, Object> statistics = new HashMap<>();
-            statistics.put("totalQuizzes", results.size());
-            statistics.put("results", results);
-
+            Map<String, Object> statistics = statisticsService.getUserStatistics(userId);
             return ResponseEntity.ok(statistics);
         } catch (Exception e) {
-            Map<String, String> response = new HashMap<>();
-            response.put("error", e.getMessage());
-            return ResponseEntity.badRequest().body(response);
+            return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
         }
     }
 }
