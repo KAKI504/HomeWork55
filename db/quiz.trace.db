@@ -94,3 +94,7 @@ Wrong user name or password [28000-220]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:522)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
 	... 84 more
+2025-04-07 05:26:13 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "[*]pm.variables.set(""currentTime"", Date.now())"; ожидалось "PREPARE"
+Syntax error in SQL statement "[*]pm.variables.set(""currentTime"", Date.now())"; expected "PREPARE"; SQL statement:
+pm.variables.set("currentTime", Date.now()) [42001-220]
