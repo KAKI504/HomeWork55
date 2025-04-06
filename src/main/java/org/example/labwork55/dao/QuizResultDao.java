@@ -56,4 +56,16 @@ public class QuizResultDao {
         String sql = "select * from quiz_results where quiz_id = ? order by score desc, completed_at asc limit ?";
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(QuizResult.class), quizId, limit);
     }
+
+    public List<QuizResult> getAllResults() {
+        String sql = "select * from quiz_results";
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(QuizResult.class));
+    }
+
+    public List<QuizResult> getResultsByQuizIdPaginated(int quizId, int page, int size) {
+        int offset = page * size;
+        String sql = "select * from quiz_results where quiz_id = ? order by score desc limit ? offset ?";
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(QuizResult.class), quizId, size, offset);
+    }
+
 }
