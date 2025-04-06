@@ -31,6 +31,7 @@ public class StatisticsServiceImpl implements StatisticsService {
         List<QuizResult> results = quizResultDao.getResultsByUserId(userEmail);
 
         statistics.put("totalQuizzes", results.size());
+        statistics.put("totalQuizzesAvailable", quizDao.getAllQuizzes().size());
 
         OptionalDouble avgScore = results.stream()
                 .mapToDouble(r -> ((double) r.getScore() / r.getTotalQuestions()) * 100)
@@ -42,11 +43,10 @@ public class StatisticsServiceImpl implements StatisticsService {
                 .max();
         statistics.put("bestScore", bestScore.orElse(0.0));
 
-        List<QuizResultDto> resultDtos = results.stream()
-                .map(r -> quizResultService.getResultsByQuizId(r.getQuizId()))
-                .flatMap(List::stream)
-                .collect(Collectors.toList());
+        List<QuizResultDto> resultDtos = quizResultService.getResultsByUserEmail(userEmail);
         statistics.put("results", resultDtos);
+
+        statistics.put("averageCompletionTimeMinutes", 0);
 
         return statistics;
     }
@@ -55,11 +55,28 @@ public class StatisticsServiceImpl implements StatisticsService {
     public Map<String, Object> getGlobalStatistics() {
         Map<String, Object> statistics = new HashMap<>();
 
-        statistics.put("totalUsers", userDao.getUsers().size());
+        int totalUsers = userDao.getUsers().size();
+        int totalQuizzes = quizDao.getAllQuizzes().size();
 
-        statistics.put("totalQuizzes", quizDao.getAllQuizzes().size());
+        statistics.put("totalUsers", totalUsers);
+        statistics.put("totalQuizzes", totalQuizzes);
 
-        statistics.put("totalAttempts", 0);
+        List<QuizResult> allResults = quizResultDao.getAllResults();
+
+        statistics.put("totalAttempts", allResults.size());
+
+        OptionalDouble globalAvgScore = allResults.stream()
+                .mapToDouble(r -> ((double) r.getScore() / r.getTotalQuestions()) * 100)
+                .average();
+        statistics.put("globalAverageScore", globalAvgScore.orElse(0.0));
+
+        Map<String, Long> topUsers = allResults.stream()
+                .collect(Collectors.groupingBy(QuizResult::getUserId, Collectors.counting()));
+
+        statistics.put("topUsers", topUsers.entrySet().stream()
+                .sorted(Map.Entry.<String, Long>comparingByValue().reversed())
+                .limit(5)
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)));
 
         return statistics;
     }
