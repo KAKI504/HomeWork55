@@ -2,6 +2,7 @@ package org.example.labwork55.dao;
 
 import lombok.RequiredArgsConstructor;
 import org.example.labwork55.model.Question;
+import org.example.labwork55.model.QuizResult;
 import org.springframework.dao.support.DataAccessUtils;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -46,5 +47,16 @@ public class QuestionDao {
                 }, keyHolder
         );
         return Objects.requireNonNull(keyHolder.getKey()).intValue();
+    }
+    public List<Question> getQuestionsByQuizIdPaginated(int quizId, int page, int size) {
+        int offset = page * size;
+        String sql = "select * from questions where quiz_id = ? limit ? offset ?";
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Question.class), quizId, size, offset);
+    }
+
+    public List<QuizResult> getResultsByQuizIdPaginated(int quizId, int page, int size) {
+        int offset = page * size;
+        String sql = "select * from quiz_results where quiz_id = ? order by score desc limit ? offset ?";
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(QuizResult.class), quizId, size, offset);
     }
 }
