@@ -14,4 +14,5 @@ public class Quiz {
     private String title;
     private String description;
     private String createdBy;
+    private int timeLimitSeconds;
 }
