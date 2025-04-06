@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-timer-to-quizzes
+      author: developer
+      changes:
+        - addColumn:
+            tableName: quizzes
+            columns:
+              - column:
+                  name: time_limit_seconds
+                  type: int
+                  defaultValue: 0
