@@ -16,4 +16,6 @@ public class QuizDto {
     private String title;
     private String description;
     private List<QuestionDto> questions;
+    private Integer timeLimitSeconds;
+    private List<CategoryDto> categories;
 }
