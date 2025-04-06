@@ -52,4 +52,16 @@ public class QuestionController {
             return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
         }
     }
+    @GetMapping("/paginated")
+    public ResponseEntity<?> getQuestionsByQuizIdPaginated(
+            @PathVariable int quizId,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size) {
+        try {
+            return ResponseEntity.ok(questionService.getQuestionsByQuizIdPaginated(quizId, page, size));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
+        }
+    }
+
 }
