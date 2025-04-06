@@ -8,4 +8,5 @@ public interface QuestionService {
     List<QuestionDto> getQuestionsByQuizId(int quizId);
     QuestionDto getQuestionById(int id);
     int createQuestion(QuestionDto questionDto, int quizId);
+    List<QuestionDto> getQuestionsByQuizIdPaginated(int quizId, int page, int size);
 }

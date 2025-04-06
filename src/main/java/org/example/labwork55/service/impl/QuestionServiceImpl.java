@@ -73,4 +73,11 @@ public class QuestionServiceImpl implements QuestionService {
                 .options(optionDtos)
                 .build();
     }
+    @Override
+    public List<QuestionDto> getQuestionsByQuizIdPaginated(int quizId, int page, int size) {
+        List<Question> questions = questionDao.getQuestionsByQuizIdPaginated(quizId, page, size);
+        return questions.stream()
+                .map(this::mapToDto)
+                .collect(Collectors.toList());
+    }
 }
