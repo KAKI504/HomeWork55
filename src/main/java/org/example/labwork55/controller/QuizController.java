@@ -47,39 +47,6 @@ public class QuizController {
         }
     }
 
-    @PostMapping("/{quizId}/solve")
-    public ResponseEntity<?> solveQuiz(@PathVariable int quizId,
-                                       @RequestBody Map<Integer, Integer> answers,
-                                       Principal principal) {
-        try {
-            if (quizResultService.hasUserCompletedQuiz(principal.getName(), quizId)) {
-                return ResponseEntity.badRequest().body(Map.of("error", "You have already completed this quiz"));
-            }
-
-            Map<String, Boolean> results = quizService.checkQuizAnswers(quizId, answers);
-
-            long correctCount = results.entrySet().stream()
-                    .filter(entry -> !entry.getKey().equals("total_questions") && !entry.getKey().equals("total_correct"))
-                    .filter(Map.Entry::getValue)
-                    .count();
-
-            int totalQuestions = (int) results.entrySet().stream()
-                    .filter(entry -> !entry.getKey().equals("total_questions") && !entry.getKey().equals("total_correct"))
-                    .count();
-
-            quizResultService.saveResult(principal.getName(), quizId, (int) correctCount, totalQuestions);
-
-            Map<String, Object> response = new HashMap<>();
-            response.put("correct", correctCount);
-            response.put("total", totalQuestions);
-            response.put("results", results);
-
-            return ResponseEntity.ok(response);
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
-        }
-    }
-
     @PostMapping("/{quizId}/rate")
     public ResponseEntity<?> rateQuiz(@PathVariable int quizId,
                                       @RequestBody Map<String, Integer> rateRequest,
@@ -116,6 +83,54 @@ public class QuizController {
                                             @RequestParam(defaultValue = "10") int limit) {
         try {
             return ResponseEntity.ok(quizResultService.getLeaderboard(quizId, limit));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
+        }
+    }
+    @PostMapping("/{quizId}/solve")
+    public ResponseEntity<?> solveQuiz(@PathVariable int quizId,
+                                       @RequestBody Map<Integer, Integer> answers,
+                                       @RequestParam(required = false) Long startTime,
+                                       Principal principal) {
+        try {
+            if (quizResultService.hasUserCompletedQuiz(principal.getName(), quizId)) {
+                return ResponseEntity.badRequest().body(Map.of("error", "You have already completed this quiz"));
+            }
+
+            QuizDto quiz = quizService.getQuizById(quizId);
+
+            if (quiz.getTimeLimitSeconds() > 0 && startTime != null) {
+                long currentTime = System.currentTimeMillis();
+                long elapsedTimeSeconds = (currentTime - startTime) / 1000;
+
+                if (elapsedTimeSeconds > quiz.getTimeLimitSeconds()) {
+                    Map<String, Object> response = new HashMap<>();
+                    response.put("error", "Time limit exceeded");
+                    response.put("time_limit", quiz.getTimeLimitSeconds());
+                    response.put("elapsed_time", elapsedTimeSeconds);
+                    return ResponseEntity.badRequest().body(response);
+                }
+            }
+
+            Map<String, Boolean> results = quizService.checkQuizAnswers(quizId, answers);
+
+            long correctCount = results.entrySet().stream()
+                    .filter(entry -> !entry.getKey().equals("total_questions") && !entry.getKey().equals("total_correct"))
+                    .filter(Map.Entry::getValue)
+                    .count();
+
+            int totalQuestions = (int) results.entrySet().stream()
+                    .filter(entry -> !entry.getKey().equals("total_questions") && !entry.getKey().equals("total_correct"))
+                    .count();
+
+            quizResultService.saveResult(principal.getName(), quizId, (int) correctCount, totalQuestions);
+
+            Map<String, Object> response = new HashMap<>();
+            response.put("correct", correctCount);
+            response.put("total", totalQuestions);
+            response.put("results", results);
+
+            return ResponseEntity.ok(response);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
         }
