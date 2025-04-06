@@ -105,4 +105,11 @@ public class QuizResultServiceImpl implements QuizResultService {
                 .completedAt(result.getCompletedAt().format(formatter))
                 .build();
     }
+    @Override
+    public List<QuizResultDto> getResultsByQuizIdPaginated(int quizId, int page, int size) {
+        return quizResultDao.getResultsByQuizIdPaginated(quizId, page, size).stream()
+                .map(this::mapToDto)
+                .collect(Collectors.toList());
+    }
+
 }

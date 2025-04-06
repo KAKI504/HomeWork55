@@ -12,4 +12,6 @@ public interface QuizResultService {
     List<QuizResultDto> getLeaderboard(int quizId, int limit);
     boolean hasUserCompletedQuiz(String userEmail, int quizId);
     Map<String, Object> rateQuiz(String userEmail, int quizId, int score);
+    List<QuizResultDto> getResultsByQuizIdPaginated(int quizId, int page, int size);
+
 }
