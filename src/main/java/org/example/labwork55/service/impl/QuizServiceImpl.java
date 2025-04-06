@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.example.labwork55.dao.OptionDao;
 import org.example.labwork55.dao.QuestionDao;
 import org.example.labwork55.dao.QuizDao;
+import org.example.labwork55.dto.CategoryDto;
 import org.example.labwork55.dto.OptionDto;
 import org.example.labwork55.dto.QuestionDto;
 import org.example.labwork55.dto.QuizDto;
@@ -11,6 +12,7 @@ import org.example.labwork55.exceptions.QuizNotFoundException;
 import org.example.labwork55.model.Option;
 import org.example.labwork55.model.Question;
 import org.example.labwork55.model.Quiz;
+import org.example.labwork55.service.CategoryService;
 import org.example.labwork55.service.QuizService;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +28,7 @@ public class QuizServiceImpl implements QuizService {
     private final QuizDao quizDao;
     private final QuestionDao questionDao;
     private final OptionDao optionDao;
+    private final CategoryService categoryService;
 
     @Override
     public List<QuizDto> getAllQuizzes() {
@@ -39,7 +42,13 @@ public class QuizServiceImpl implements QuizService {
     public QuizDto getQuizById(int id) {
         Quiz quiz = quizDao.getQuizById(id)
                 .orElseThrow(() -> new QuizNotFoundException("Quiz not found with id: " + id));
-        return mapToDto(quiz);
+
+        List<CategoryDto> categories = categoryService.getCategoriesByQuizId(id);
+
+        QuizDto quizDto = mapToDto(quiz);
+        quizDto.setCategories(categories);
+
+        return quizDto;
     }
 
     @Override
@@ -48,8 +57,20 @@ public class QuizServiceImpl implements QuizService {
         quiz.setTitle(quizDto.getTitle());
         quiz.setDescription(quizDto.getDescription());
         quiz.setCreatedBy(creatorEmail);
+        quiz.setTimeLimitSeconds(quizDto.getTimeLimitSeconds() != null ? quizDto.getTimeLimitSeconds() : 0);
 
         int quizId = quizDao.createQuiz(quiz);
+
+        if (quizDto.getCategories() != null && !quizDto.getCategories().isEmpty()) {
+            for (CategoryDto categoryDto : quizDto.getCategories()) {
+                if (categoryDto.getId() != null) {
+                    categoryService.assignCategoryToQuiz(quizId, categoryDto.getId());
+                } else if (categoryDto.getName() != null && !categoryDto.getName().trim().isEmpty()) {
+                    int categoryId = categoryService.createCategory(categoryDto);
+                    categoryService.assignCategoryToQuiz(quizId, categoryId);
+                }
+            }
+        }
 
         if (quizDto.getQuestions() != null) {
             for (QuestionDto questionDto : quizDto.getQuestions()) {
@@ -135,6 +156,7 @@ public class QuizServiceImpl implements QuizService {
                 .id(quiz.getId())
                 .title(quiz.getTitle())
                 .description(quiz.getDescription())
+                .timeLimitSeconds(quiz.getTimeLimitSeconds())
                 .questions(questionDtos)
                 .build();
     }
