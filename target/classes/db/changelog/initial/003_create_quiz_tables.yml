@@ -1,0 +1,77 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-quiz-tables
+      author: developer
+      changes:
+        - createTable:
+            tableName: quizzes
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar(500)
+              - column:
+                  name: created_by
+                  type: varchar(100)
+                  constraints:
+                    foreignKeyName: fk_quiz_user
+                    references: users(email)
+        - createTable:
+            tableName: questions
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: quiz_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_question_quiz
+                    references: quizzes(id)
+              - column:
+                  name: question_text
+                  type: varchar(500)
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: options
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: question_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_option_question
+                    references: questions(id)
+              - column:
+                  name: option_text
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: is_correct
+                  type: boolean
+                  defaultValue: false

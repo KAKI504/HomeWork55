@@ -1,0 +1,43 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-quiz-results
+      author: developer
+      changes:
+        - createTable:
+            tableName: quiz_results
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_result_user
+                    references: users(email)
+              - column:
+                  name: quiz_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_result_quiz
+                    references: quizzes(id)
+              - column:
+                  name: score
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: total_questions
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: completed_at
+                  type: timestamp
+                  defaultValueComputed: CURRENT_TIMESTAMP

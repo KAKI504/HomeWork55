@@ -1,0 +1,501 @@
+2025-04-07T01:25:23.784+06:00  INFO 75826 --- [Online Quiz Platform] [main] o.e.labwork55.Labwork55Application       : Starting Labwork55Application using Java 21.0.4 with PID 75826 (/Users/kanat/Desktop/Labwork55/target/classes started by kanat in /Users/kanat/Desktop/Labwork55)
+2025-04-07T01:25:23.790+06:00  INFO 75826 --- [Online Quiz Platform] [main] o.e.labwork55.Labwork55Application       : No active profile set, falling back to 1 default profile: "default"
+2025-04-07T01:25:24.656+06:00  INFO 75826 --- [Online Quiz Platform] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2025-04-07T01:25:24.664+06:00  INFO 75826 --- [Online Quiz Platform] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-07T01:25:24.664+06:00  INFO 75826 --- [Online Quiz Platform] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-07T01:25:24.684+06:00  INFO 75826 --- [Online Quiz Platform] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-07T01:25:24.685+06:00  INFO 75826 --- [Online Quiz Platform] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 849 ms
+2025-04-07T01:25:24.786+06:00  INFO 75826 --- [Online Quiz Platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-07T01:25:24.964+06:00  INFO 75826 --- [Online Quiz Platform] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/quiz user=SA
+2025-04-07T01:25:24.965+06:00  INFO 75826 --- [Online Quiz Platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-07T01:25:24.995+06:00  INFO 75826 --- [Online Quiz Platform] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-04-07T01:25:25.090+06:00  INFO 75826 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_users_table.yml
+2025-04-07T01:25:25.220+06:00  INFO 75826 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-04-07T01:25:25.222+06:00  INFO 75826 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_role_table.yml
+2025-04-07T01:25:25.226+06:00  INFO 75826 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_create_quiz_tables.yml
+2025-04-07T01:25:25.229+06:00  INFO 75826 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_quiz_results.yml
+2025-04-07T01:25:25.256+06:00  INFO 75826 --- [Online Quiz Platform] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-04-07T01:25:25.257+06:00  INFO 75826 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-04-07T01:25:25.261+06:00  INFO 75826 --- [Online Quiz Platform] [main] liquibase.util                           : UPDATE SUMMARY
+2025-04-07T01:25:25.261+06:00  INFO 75826 --- [Online Quiz Platform] [main] liquibase.util                           : Run:                          0
+2025-04-07T01:25:25.261+06:00  INFO 75826 --- [Online Quiz Platform] [main] liquibase.util                           : Previously run:               4
+2025-04-07T01:25:25.262+06:00  INFO 75826 --- [Online Quiz Platform] [main] liquibase.util                           : Filtered out:                 0
+2025-04-07T01:25:25.262+06:00  INFO 75826 --- [Online Quiz Platform] [main] liquibase.util                           : -------------------------------
+2025-04-07T01:25:25.262+06:00  INFO 75826 --- [Online Quiz Platform] [main] liquibase.util                           : Total change sets:            4
+2025-04-07T01:25:25.262+06:00  INFO 75826 --- [Online Quiz Platform] [main] liquibase.util                           : Update summary generated
+2025-04-07T01:25:25.263+06:00  INFO 75826 --- [Online Quiz Platform] [main] liquibase.command                        : Command execution complete
+2025-04-07T01:25:26.842+06:00  WARN 75826 --- [Online Quiz Platform] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-07T01:25:26.961+06:00 DEBUG 75826 --- [Online Quiz Platform] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-07T01:25:27.063+06:00  INFO 75826 --- [Online Quiz Platform] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:./db/quiz'
+2025-04-07T01:25:27.071+06:00  WARN 75826 --- [Online Quiz Platform] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 524b113d-b527-4b9f-a5ce-8b70993e586f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-07T01:25:27.096+06:00  INFO 75826 --- [Online Quiz Platform] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
+2025-04-07T01:25:27.101+06:00  INFO 75826 --- [Online Quiz Platform] [main] o.e.labwork55.Labwork55Application       : Started Labwork55Application in 3.67 seconds (process running for 4.162)
+2025-04-07T01:25:45.730+06:00  INFO 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-07T01:25:45.731+06:00  INFO 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-07T01:25:45.733+06:00  INFO 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-04-07T01:25:45.747+06:00 DEBUG 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/users/test@example.com/statistics
+2025-04-07T01:25:45.848+06:00 DEBUG 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2025-04-07T01:25:45.848+06:00 DEBUG 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [select email, password, enabled from users where email = ?]
+2025-04-07T01:25:45.855+06:00 DEBUG 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2025-04-07T01:25:45.855+06:00 DEBUG 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [select email, role from users u, role r where u.email = ? and u.role_id = r.id]
+2025-04-07T01:25:45.948+06:00 DEBUG 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-07T01:25:45.949+06:00 DEBUG 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=test@example.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[USER]]
+2025-04-07T01:25:45.954+06:00 DEBUG 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/users/test@example.com/statistics
+2025-04-07T01:25:45.972+06:00 DEBUG 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2025-04-07T01:25:45.972+06:00 DEBUG 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [select * from quiz_results where user_id = ? order by completed_at desc]
+2025-04-07T01:25:45.976+06:00 DEBUG 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2025-04-07T01:25:45.977+06:00 DEBUG 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [select * from users where email = ?]
+2025-04-07T01:25:45.980+06:00 DEBUG 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2025-04-07T01:25:45.980+06:00 DEBUG 75826 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [select * from quizzes where id = ?]
+2025-04-07T01:29:58.046+06:00  INFO 75826 --- [Online Quiz Platform] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-07T01:29:58.051+06:00  INFO 75826 --- [Online Quiz Platform] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-07T01:29:58.060+06:00  INFO 75826 --- [Online Quiz Platform] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-07T01:29:58.281+06:00  INFO 75826 --- [Online Quiz Platform] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-07T01:30:04.796+06:00  INFO 77251 --- [Online Quiz Platform] [main] o.e.labwork55.Labwork55Application       : Starting Labwork55Application using Java 21.0.4 with PID 77251 (/Users/kanat/Desktop/Labwork55/target/classes started by kanat in /Users/kanat/Desktop/Labwork55)
+2025-04-07T01:30:04.797+06:00  INFO 77251 --- [Online Quiz Platform] [main] o.e.labwork55.Labwork55Application       : No active profile set, falling back to 1 default profile: "default"
+2025-04-07T01:30:05.397+06:00  INFO 77251 --- [Online Quiz Platform] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2025-04-07T01:30:05.416+06:00  INFO 77251 --- [Online Quiz Platform] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-07T01:30:05.416+06:00  INFO 77251 --- [Online Quiz Platform] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-07T01:30:05.483+06:00  INFO 77251 --- [Online Quiz Platform] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-07T01:30:05.483+06:00  INFO 77251 --- [Online Quiz Platform] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 667 ms
+2025-04-07T01:30:05.635+06:00  INFO 77251 --- [Online Quiz Platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-07T01:30:05.904+06:00  INFO 77251 --- [Online Quiz Platform] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/quiz user=SA
+2025-04-07T01:30:05.905+06:00  INFO 77251 --- [Online Quiz Platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-07T01:30:05.943+06:00  INFO 77251 --- [Online Quiz Platform] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-04-07T01:30:06.078+06:00  INFO 77251 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_users_table.yml
+2025-04-07T01:30:06.252+06:00  INFO 77251 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-04-07T01:30:06.254+06:00  INFO 77251 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_role_table.yml
+2025-04-07T01:30:06.256+06:00  INFO 77251 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_create_quiz_tables.yml
+2025-04-07T01:30:06.259+06:00  INFO 77251 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_quiz_results.yml
+2025-04-07T01:30:06.286+06:00  INFO 77251 --- [Online Quiz Platform] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-04-07T01:30:06.287+06:00  INFO 77251 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-04-07T01:30:06.291+06:00  INFO 77251 --- [Online Quiz Platform] [main] liquibase.util                           : UPDATE SUMMARY
+2025-04-07T01:30:06.291+06:00  INFO 77251 --- [Online Quiz Platform] [main] liquibase.util                           : Run:                          0
+2025-04-07T01:30:06.291+06:00  INFO 77251 --- [Online Quiz Platform] [main] liquibase.util                           : Previously run:               4
+2025-04-07T01:30:06.291+06:00  INFO 77251 --- [Online Quiz Platform] [main] liquibase.util                           : Filtered out:                 0
+2025-04-07T01:30:06.291+06:00  INFO 77251 --- [Online Quiz Platform] [main] liquibase.util                           : -------------------------------
+2025-04-07T01:30:06.291+06:00  INFO 77251 --- [Online Quiz Platform] [main] liquibase.util                           : Total change sets:            4
+2025-04-07T01:30:06.291+06:00  INFO 77251 --- [Online Quiz Platform] [main] liquibase.util                           : Update summary generated
+2025-04-07T01:30:06.292+06:00  INFO 77251 --- [Online Quiz Platform] [main] liquibase.command                        : Command execution complete
+2025-04-07T01:30:07.112+06:00  WARN 77251 --- [Online Quiz Platform] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-07T01:30:07.287+06:00 DEBUG 77251 --- [Online Quiz Platform] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-07T01:30:07.403+06:00  INFO 77251 --- [Online Quiz Platform] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:./db/quiz'
+2025-04-07T01:30:07.410+06:00  WARN 77251 --- [Online Quiz Platform] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6f9348b7-16d2-4b36-ad0a-62b69d3c856f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-07T01:30:07.453+06:00  INFO 77251 --- [Online Quiz Platform] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
+2025-04-07T01:30:07.465+06:00  INFO 77251 --- [Online Quiz Platform] [main] o.e.labwork55.Labwork55Application       : Started Labwork55Application in 2.863 seconds (process running for 3.259)
+2025-04-07T01:30:20.314+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /h2-console/login.do?jsessionid=27a7ca83ad8ee0f2c00843b5dc0a9b92
+2025-04-07T01:30:20.323+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:30:20.323+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:30:20.324+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /h2-console/login.do?jsessionid=27a7ca83ad8ee0f2c00843b5dc0a9b92
+2025-04-07T01:30:20.392+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/stylesheet.css
+2025-04-07T01:30:20.392+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:30:20.392+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:30:20.392+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/stylesheet.css
+2025-04-07T01:30:20.409+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/login.jsp?jsessionid=032b5a2666c76ffdd3361bcd2746f006
+2025-04-07T01:30:20.409+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:30:20.409+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:30:20.410+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/login.jsp?jsessionid=032b5a2666c76ffdd3361bcd2746f006
+2025-04-07T01:30:20.427+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/background.gif
+2025-04-07T01:30:20.428+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:30:20.428+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:30:20.428+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/background.gif
+2025-04-07T01:30:20.462+06:00  INFO 77251 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-07T01:30:20.462+06:00  INFO 77251 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-07T01:30:20.465+06:00  INFO 77251 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-04-07T01:30:20.466+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2025-04-07T01:30:20.466+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:30:20.466+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:30:20.467+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2025-04-07T01:30:22.868+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /h2-console/login.do?jsessionid=032b5a2666c76ffdd3361bcd2746f006
+2025-04-07T01:30:22.871+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:30:22.871+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-6] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:30:22.871+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /h2-console/login.do?jsessionid=032b5a2666c76ffdd3361bcd2746f006
+2025-04-07T01:30:22.897+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/header.jsp?jsessionid=032b5a2666c76ffdd3361bcd2746f006
+2025-04-07T01:30:22.897+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:30:22.897+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:30:22.898+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tables.do?jsessionid=032b5a2666c76ffdd3361bcd2746f006
+2025-04-07T01:30:22.898+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/header.jsp?jsessionid=032b5a2666c76ffdd3361bcd2746f006
+2025-04-07T01:30:22.898+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:30:22.898+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:30:22.898+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tables.do?jsessionid=032b5a2666c76ffdd3361bcd2746f006
+2025-04-07T01:30:22.900+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/query.jsp?jsessionid=032b5a2666c76ffdd3361bcd2746f006
+2025-04-07T01:30:22.900+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:30:22.900+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-9] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:30:22.900+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/query.jsp?jsessionid=032b5a2666c76ffdd3361bcd2746f006
+2025-04-07T01:30:22.902+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/help.jsp?jsessionid=032b5a2666c76ffdd3361bcd2746f006
+2025-04-07T01:30:22.903+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:30:22.904+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:30:22.905+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/help.jsp?jsessionid=032b5a2666c76ffdd3361bcd2746f006
+2025-04-07T01:30:22.967+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2025-04-07T01:30:22.967+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:30:22.967+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:30:22.967+06:00 DEBUG 77251 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2025-04-07T01:32:50.201+06:00  INFO 78112 --- [Online Quiz Platform] [main] o.e.labwork55.Labwork55Application       : Starting Labwork55Application using Java 21.0.4 with PID 78112 (/Users/kanat/Desktop/HomeWork55/target/classes started by kanat in /Users/kanat/Desktop/HomeWork55)
+2025-04-07T01:32:50.203+06:00  INFO 78112 --- [Online Quiz Platform] [main] o.e.labwork55.Labwork55Application       : No active profile set, falling back to 1 default profile: "default"
+2025-04-07T01:32:50.775+06:00  INFO 78112 --- [Online Quiz Platform] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2025-04-07T01:32:50.782+06:00  INFO 78112 --- [Online Quiz Platform] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-07T01:32:50.782+06:00  INFO 78112 --- [Online Quiz Platform] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-07T01:32:50.802+06:00  INFO 78112 --- [Online Quiz Platform] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-07T01:32:50.803+06:00  INFO 78112 --- [Online Quiz Platform] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 583 ms
+2025-04-07T01:32:50.898+06:00  INFO 78112 --- [Online Quiz Platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-07T01:32:50.966+06:00  INFO 78112 --- [Online Quiz Platform] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:./db/quiz user=SA
+2025-04-07T01:32:50.967+06:00  INFO 78112 --- [Online Quiz Platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-07T01:32:51.001+06:00  INFO 78112 --- [Online Quiz Platform] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-04-07T01:32:51.098+06:00  INFO 78112 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_users_table.yml
+2025-04-07T01:32:51.234+06:00  INFO 78112 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-04-07T01:32:51.237+06:00  INFO 78112 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_role_table.yml
+2025-04-07T01:32:51.240+06:00  INFO 78112 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_create_quiz_tables.yml
+2025-04-07T01:32:51.244+06:00  INFO 78112 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_quiz_results.yml
+2025-04-07T01:32:51.273+06:00  INFO 78112 --- [Online Quiz Platform] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-04-07T01:32:51.274+06:00  INFO 78112 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-04-07T01:32:51.278+06:00  INFO 78112 --- [Online Quiz Platform] [main] liquibase.util                           : UPDATE SUMMARY
+2025-04-07T01:32:51.278+06:00  INFO 78112 --- [Online Quiz Platform] [main] liquibase.util                           : Run:                          0
+2025-04-07T01:32:51.279+06:00  INFO 78112 --- [Online Quiz Platform] [main] liquibase.util                           : Previously run:               4
+2025-04-07T01:32:51.279+06:00  INFO 78112 --- [Online Quiz Platform] [main] liquibase.util                           : Filtered out:                 0
+2025-04-07T01:32:51.279+06:00  INFO 78112 --- [Online Quiz Platform] [main] liquibase.util                           : -------------------------------
+2025-04-07T01:32:51.279+06:00  INFO 78112 --- [Online Quiz Platform] [main] liquibase.util                           : Total change sets:            4
+2025-04-07T01:32:51.279+06:00  INFO 78112 --- [Online Quiz Platform] [main] liquibase.util                           : Update summary generated
+2025-04-07T01:32:51.280+06:00  INFO 78112 --- [Online Quiz Platform] [main] liquibase.command                        : Command execution complete
+2025-04-07T01:32:52.038+06:00  WARN 78112 --- [Online Quiz Platform] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-07T01:32:52.167+06:00 DEBUG 78112 --- [Online Quiz Platform] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-07T01:32:52.276+06:00  INFO 78112 --- [Online Quiz Platform] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:./db/quiz'
+2025-04-07T01:32:52.283+06:00  WARN 78112 --- [Online Quiz Platform] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6ebe4bf8-4fdd-457d-a7a6-9c1fc8d9baff
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-07T01:32:52.302+06:00  WARN 78112 --- [Online Quiz Platform] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-04-07T01:32:52.304+06:00  INFO 78112 --- [Online Quiz Platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-07T01:32:52.308+06:00  INFO 78112 --- [Online Quiz Platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-07T01:32:52.314+06:00  INFO 78112 --- [Online Quiz Platform] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-07T01:32:52.320+06:00 ERROR 78112 --- [Online Quiz Platform] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8089 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8089 or configure this application to listen on another port.
+
+2025-04-07T01:33:22.603+06:00  INFO 78277 --- [Online Quiz Platform] [main] o.e.labwork55.Labwork55Application       : Starting Labwork55Application using Java 21.0.4 with PID 78277 (/Users/kanat/Desktop/HomeWork55/target/classes started by kanat in /Users/kanat/Desktop/HomeWork55)
+2025-04-07T01:33:22.604+06:00  INFO 78277 --- [Online Quiz Platform] [main] o.e.labwork55.Labwork55Application       : No active profile set, falling back to 1 default profile: "default"
+2025-04-07T01:33:23.189+06:00  INFO 78277 --- [Online Quiz Platform] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2025-04-07T01:33:23.196+06:00  INFO 78277 --- [Online Quiz Platform] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-07T01:33:23.197+06:00  INFO 78277 --- [Online Quiz Platform] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-07T01:33:23.218+06:00  INFO 78277 --- [Online Quiz Platform] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-07T01:33:23.218+06:00  INFO 78277 --- [Online Quiz Platform] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 580 ms
+2025-04-07T01:33:23.314+06:00  INFO 78277 --- [Online Quiz Platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-07T01:33:26.824+06:00  INFO 78277 --- [Online Quiz Platform] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/quiz user=SA
+2025-04-07T01:33:26.825+06:00  INFO 78277 --- [Online Quiz Platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-07T01:33:26.850+06:00  INFO 78277 --- [Online Quiz Platform] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-04-07T01:33:26.925+06:00  INFO 78277 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_users_table.yml
+2025-04-07T01:33:27.028+06:00  INFO 78277 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-04-07T01:33:27.029+06:00  INFO 78277 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_role_table.yml
+2025-04-07T01:33:27.032+06:00  INFO 78277 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_create_quiz_tables.yml
+2025-04-07T01:33:27.037+06:00  INFO 78277 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_quiz_results.yml
+2025-04-07T01:33:27.070+06:00  INFO 78277 --- [Online Quiz Platform] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-04-07T01:33:27.071+06:00  INFO 78277 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-04-07T01:33:27.076+06:00  INFO 78277 --- [Online Quiz Platform] [main] liquibase.util                           : UPDATE SUMMARY
+2025-04-07T01:33:27.077+06:00  INFO 78277 --- [Online Quiz Platform] [main] liquibase.util                           : Run:                          0
+2025-04-07T01:33:27.077+06:00  INFO 78277 --- [Online Quiz Platform] [main] liquibase.util                           : Previously run:               4
+2025-04-07T01:33:27.077+06:00  INFO 78277 --- [Online Quiz Platform] [main] liquibase.util                           : Filtered out:                 0
+2025-04-07T01:33:27.077+06:00  INFO 78277 --- [Online Quiz Platform] [main] liquibase.util                           : -------------------------------
+2025-04-07T01:33:27.077+06:00  INFO 78277 --- [Online Quiz Platform] [main] liquibase.util                           : Total change sets:            4
+2025-04-07T01:33:27.077+06:00  INFO 78277 --- [Online Quiz Platform] [main] liquibase.util                           : Update summary generated
+2025-04-07T01:33:27.078+06:00  INFO 78277 --- [Online Quiz Platform] [main] liquibase.command                        : Command execution complete
+2025-04-07T01:33:27.734+06:00  WARN 78277 --- [Online Quiz Platform] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-07T01:33:27.862+06:00 DEBUG 78277 --- [Online Quiz Platform] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-07T01:33:27.979+06:00  INFO 78277 --- [Online Quiz Platform] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:./db/quiz'
+2025-04-07T01:33:27.987+06:00  WARN 78277 --- [Online Quiz Platform] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a73d1489-e2ae-4b14-bb70-1a5f18b468bc
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-07T01:33:28.012+06:00  INFO 78277 --- [Online Quiz Platform] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
+2025-04-07T01:33:28.018+06:00  INFO 78277 --- [Online Quiz Platform] [main] o.e.labwork55.Labwork55Application       : Started Labwork55Application in 5.63 seconds (process running for 5.952)
+2025-04-07T01:33:37.720+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /h2-console/login.do?jsessionid=032b5a2666c76ffdd3361bcd2746f006
+2025-04-07T01:33:37.725+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:33:37.725+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:33:37.727+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /h2-console/login.do?jsessionid=032b5a2666c76ffdd3361bcd2746f006
+2025-04-07T01:33:37.780+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/stylesheet.css
+2025-04-07T01:33:37.781+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:33:37.781+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:33:37.781+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/stylesheet.css
+2025-04-07T01:33:37.806+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/login.jsp?jsessionid=0059caf4c8509dcbc4bb2f6c81c106bc
+2025-04-07T01:33:37.806+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:33:37.807+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:33:37.807+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/login.jsp?jsessionid=0059caf4c8509dcbc4bb2f6c81c106bc
+2025-04-07T01:33:37.822+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/background.gif
+2025-04-07T01:33:37.823+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:33:37.823+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:33:37.823+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/background.gif
+2025-04-07T01:33:37.843+06:00  INFO 78277 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-07T01:33:37.843+06:00  INFO 78277 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-07T01:33:37.846+06:00  INFO 78277 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-04-07T01:33:37.847+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2025-04-07T01:33:37.847+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:33:37.847+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:33:37.848+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2025-04-07T01:33:39.163+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /h2-console/login.do?jsessionid=0059caf4c8509dcbc4bb2f6c81c106bc
+2025-04-07T01:33:39.163+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:33:39.164+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:33:39.164+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /h2-console/login.do?jsessionid=0059caf4c8509dcbc4bb2f6c81c106bc
+2025-04-07T01:33:39.219+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/header.jsp?jsessionid=0059caf4c8509dcbc4bb2f6c81c106bc
+2025-04-07T01:33:39.222+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:33:39.223+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:33:39.223+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/header.jsp?jsessionid=0059caf4c8509dcbc4bb2f6c81c106bc
+2025-04-07T01:33:39.228+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tables.do?jsessionid=0059caf4c8509dcbc4bb2f6c81c106bc
+2025-04-07T01:33:39.228+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/help.jsp?jsessionid=0059caf4c8509dcbc4bb2f6c81c106bc
+2025-04-07T01:33:39.229+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:33:39.229+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:33:39.229+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:33:39.230+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/help.jsp?jsessionid=0059caf4c8509dcbc4bb2f6c81c106bc
+2025-04-07T01:33:39.231+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/query.jsp?jsessionid=0059caf4c8509dcbc4bb2f6c81c106bc
+2025-04-07T01:33:39.231+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:33:39.231+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:33:39.231+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/query.jsp?jsessionid=0059caf4c8509dcbc4bb2f6c81c106bc
+2025-04-07T01:33:39.229+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-9] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:33:39.231+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tables.do?jsessionid=0059caf4c8509dcbc4bb2f6c81c106bc
+2025-04-07T01:33:39.319+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2025-04-07T01:33:39.320+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:33:39.320+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:33:39.320+06:00 DEBUG 78277 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2025-04-07T01:34:20.097+06:00  INFO 78277 --- [Online Quiz Platform] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-07T01:34:20.100+06:00  INFO 78277 --- [Online Quiz Platform] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-07T01:34:20.105+06:00  INFO 78277 --- [Online Quiz Platform] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-07T01:34:20.108+06:00  INFO 78277 --- [Online Quiz Platform] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-07T01:34:22.965+06:00  INFO 78572 --- [Online Quiz Platform] [main] o.e.labwork55.Labwork55Application       : Starting Labwork55Application using Java 21.0.4 with PID 78572 (/Users/kanat/Desktop/HomeWork55/target/classes started by kanat in /Users/kanat/Desktop/HomeWork55)
+2025-04-07T01:34:22.966+06:00  INFO 78572 --- [Online Quiz Platform] [main] o.e.labwork55.Labwork55Application       : No active profile set, falling back to 1 default profile: "default"
+2025-04-07T01:34:23.500+06:00  INFO 78572 --- [Online Quiz Platform] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2025-04-07T01:34:23.506+06:00  INFO 78572 --- [Online Quiz Platform] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-07T01:34:23.506+06:00  INFO 78572 --- [Online Quiz Platform] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-07T01:34:23.526+06:00  INFO 78572 --- [Online Quiz Platform] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-07T01:34:23.526+06:00  INFO 78572 --- [Online Quiz Platform] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 541 ms
+2025-04-07T01:34:23.617+06:00  INFO 78572 --- [Online Quiz Platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-07T01:34:23.780+06:00  INFO 78572 --- [Online Quiz Platform] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/quiz user=SA
+2025-04-07T01:34:23.781+06:00  INFO 78572 --- [Online Quiz Platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-07T01:34:23.805+06:00  INFO 78572 --- [Online Quiz Platform] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-04-07T01:34:23.883+06:00  INFO 78572 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_users_table.yml
+2025-04-07T01:34:23.986+06:00  INFO 78572 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-04-07T01:34:23.988+06:00  INFO 78572 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_role_table.yml
+2025-04-07T01:34:23.991+06:00  INFO 78572 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_create_quiz_tables.yml
+2025-04-07T01:34:23.994+06:00  INFO 78572 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_quiz_results.yml
+2025-04-07T01:34:24.023+06:00  INFO 78572 --- [Online Quiz Platform] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-04-07T01:34:24.023+06:00  INFO 78572 --- [Online Quiz Platform] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-04-07T01:34:24.027+06:00  INFO 78572 --- [Online Quiz Platform] [main] liquibase.util                           : UPDATE SUMMARY
+2025-04-07T01:34:24.027+06:00  INFO 78572 --- [Online Quiz Platform] [main] liquibase.util                           : Run:                          0
+2025-04-07T01:34:24.027+06:00  INFO 78572 --- [Online Quiz Platform] [main] liquibase.util                           : Previously run:               4
+2025-04-07T01:34:24.027+06:00  INFO 78572 --- [Online Quiz Platform] [main] liquibase.util                           : Filtered out:                 0
+2025-04-07T01:34:24.027+06:00  INFO 78572 --- [Online Quiz Platform] [main] liquibase.util                           : -------------------------------
+2025-04-07T01:34:24.027+06:00  INFO 78572 --- [Online Quiz Platform] [main] liquibase.util                           : Total change sets:            4
+2025-04-07T01:34:24.028+06:00  INFO 78572 --- [Online Quiz Platform] [main] liquibase.util                           : Update summary generated
+2025-04-07T01:34:24.028+06:00  INFO 78572 --- [Online Quiz Platform] [main] liquibase.command                        : Command execution complete
+2025-04-07T01:34:25.157+06:00  WARN 78572 --- [Online Quiz Platform] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-07T01:34:25.275+06:00 DEBUG 78572 --- [Online Quiz Platform] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-07T01:34:25.381+06:00  INFO 78572 --- [Online Quiz Platform] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:./db/quiz'
+2025-04-07T01:34:25.388+06:00  WARN 78572 --- [Online Quiz Platform] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 78c1da7c-7a0a-4cfb-8507-f4ad34555025
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-07T01:34:25.442+06:00  INFO 78572 --- [Online Quiz Platform] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
+2025-04-07T01:34:25.449+06:00  INFO 78572 --- [Online Quiz Platform] [main] o.e.labwork55.Labwork55Application       : Started Labwork55Application in 2.668 seconds (process running for 3.048)
+2025-04-07T01:34:36.555+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /h2-console/login.do?jsessionid=0059caf4c8509dcbc4bb2f6c81c106bc
+2025-04-07T01:34:36.559+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:36.559+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:36.561+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /h2-console/login.do?jsessionid=0059caf4c8509dcbc4bb2f6c81c106bc
+2025-04-07T01:34:36.590+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/stylesheet.css
+2025-04-07T01:34:36.590+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:36.590+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:36.590+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/stylesheet.css
+2025-04-07T01:34:36.600+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/login.jsp?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:34:36.600+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:36.600+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:36.600+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/login.jsp?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:34:36.614+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/background.gif
+2025-04-07T01:34:36.614+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:36.614+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:36.615+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/background.gif
+2025-04-07T01:34:36.628+06:00  INFO 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-07T01:34:36.628+06:00  INFO 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-07T01:34:36.630+06:00  INFO 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-04-07T01:34:36.630+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2025-04-07T01:34:36.630+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:36.630+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:36.631+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2025-04-07T01:34:39.948+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /h2-console/login.do?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:34:39.950+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:39.950+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:39.951+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /h2-console/login.do?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:34:39.976+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/header.jsp?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:34:39.977+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:39.977+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:39.977+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/header.jsp?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:34:39.980+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tables.do?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:34:39.983+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:39.989+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-9] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:39.990+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tables.do?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:34:39.993+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/query.jsp?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:34:39.994+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:39.995+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:39.995+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/query.jsp?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:34:39.995+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/help.jsp?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:34:39.995+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:39.995+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:39.995+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/help.jsp?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:34:39.995+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/icon_disconnect.gif
+2025-04-07T01:34:39.996+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:39.996+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:39.996+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/icon_disconnect.gif
+2025-04-07T01:34:39.998+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/icon_line.gif
+2025-04-07T01:34:39.999+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:39.999+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.000+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/icon_line.gif
+2025-04-07T01:34:40.000+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/icon_refresh.gif
+2025-04-07T01:34:40.003+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.003+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.003+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/icon_refresh.gif
+2025-04-07T01:34:40.005+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/icon_history.gif
+2025-04-07T01:34:40.005+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.005+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.006+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/icon_history.gif
+2025-04-07T01:34:40.007+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/icon_help.gif
+2025-04-07T01:34:40.007+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.007+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-6] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.007+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/icon_help.gif
+2025-04-07T01:34:40.008+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/icon_run_selected.gif
+2025-04-07T01:34:40.008+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.008+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.008+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/icon_run_selected.gif
+2025-04-07T01:34:40.010+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/icon_rollback.gif
+2025-04-07T01:34:40.010+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.010+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-6] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.011+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/icon_rollback.gif
+2025-04-07T01:34:40.011+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/icon_stop.gif
+2025-04-07T01:34:40.011+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.011+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.011+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/icon_run.gif
+2025-04-07T01:34:40.011+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/icon_stop.gif
+2025-04-07T01:34:40.011+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.011+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.012+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/icon_run.gif
+2025-04-07T01:34:40.012+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/icon_commit.gif
+2025-04-07T01:34:40.012+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.012+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.012+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/icon_commit.gif
+2025-04-07T01:34:40.071+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tree.js
+2025-04-07T01:34:40.071+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.071+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.071+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tree.js
+2025-04-07T01:34:40.077+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tree_plus.gif
+2025-04-07T01:34:40.077+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tree_table.gif
+2025-04-07T01:34:40.078+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tree_minus.gif
+2025-04-07T01:34:40.078+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.078+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.078+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tree_empty.gif
+2025-04-07T01:34:40.078+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.078+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.077+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tree_database.gif
+2025-04-07T01:34:40.078+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.078+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tree_minus.gif
+2025-04-07T01:34:40.078+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tree_column.gif
+2025-04-07T01:34:40.079+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-6] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.079+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tree_empty.gif
+2025-04-07T01:34:40.079+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.078+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.079+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.078+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tree_table.gif
+2025-04-07T01:34:40.078+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.079+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tree_column.gif
+2025-04-07T01:34:40.079+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.079+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tree_plus.gif
+2025-04-07T01:34:40.079+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.079+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tree_database.gif
+2025-04-07T01:34:40.083+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tree_index.gif
+2025-04-07T01:34:40.083+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tree_index_az.gif
+2025-04-07T01:34:40.083+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.083+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.083+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-9] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.083+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tree_type.gif
+2025-04-07T01:34:40.083+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tree_index_az.gif
+2025-04-07T01:34:40.083+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.084+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.084+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.084+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tree_index.gif
+2025-04-07T01:34:40.084+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tree_type.gif
+2025-04-07T01:34:40.084+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tree_view.gif
+2025-04-07T01:34:40.084+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.084+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.084+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tree_view.gif
+2025-04-07T01:34:40.084+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tree_folder.gif
+2025-04-07T01:34:40.084+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.084+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.084+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tree_folder.gif
+2025-04-07T01:34:40.085+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tree_users.gif
+2025-04-07T01:34:40.085+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.085+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.085+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tree_users.gif
+2025-04-07T01:34:40.086+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tree_info.gif
+2025-04-07T01:34:40.087+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.087+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.087+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tree_info.gif
+2025-04-07T01:34:40.089+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/tree_user.gif
+2025-04-07T01:34:40.089+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.089+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.089+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/tree_user.gif
+2025-04-07T01:34:40.094+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2025-04-07T01:34:40.094+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:40.094+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:40.094+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2025-04-07T01:34:44.871+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /h2-console/query.do?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:34:44.871+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:44.871+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:44.872+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /h2-console/query.do?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:34:44.906+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/table.js
+2025-04-07T01:34:44.907+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:44.907+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:44.907+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/table.js
+2025-04-07T01:34:51.077+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /h2-console/query.do?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:34:51.079+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:51.080+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:51.080+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /h2-console/query.do?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:34:51.100+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/stylesheet.css
+2025-04-07T01:34:51.101+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:34:51.101+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:34:51.102+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/stylesheet.css
+2025-04-07T01:38:48.986+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /h2-console/query.do?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:38:48.989+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:38:48.990+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:38:48.990+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /h2-console/query.do?jsessionid=87af31e28c853f7a1bd6b05378fb981b
+2025-04-07T01:38:49.014+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/table.js
+2025-04-07T01:38:49.014+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /h2-console/stylesheet.css
+2025-04-07T01:38:49.015+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:38:49.015+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-07T01:38:49.015+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:38:49.015+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D799C9DC0237248CD89D95B9F2A46FFC
+2025-04-07T01:38:49.015+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/stylesheet.css
+2025-04-07T01:38:49.015+06:00 DEBUG 78572 --- [Online Quiz Platform] [http-nio-8089-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /h2-console/table.js
+2025-04-07T01:39:22.274+06:00  INFO 78572 --- [Online Quiz Platform] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-07T01:39:22.280+06:00  INFO 78572 --- [Online Quiz Platform] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-07T01:39:22.284+06:00  INFO 78572 --- [Online Quiz Platform] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-07T01:39:22.287+06:00  INFO 78572 --- [Online Quiz Platform] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
