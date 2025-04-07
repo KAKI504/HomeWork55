@@ -4,12 +4,6 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### Database Files ###
-*.mv.db
-*.trace.db
-db/*.db
-logs/*.log
-
 ### STS ###
 .apt_generated
 .classpath
@@ -37,12 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
-
-### Compiled Files ###
-*.class
-
-### Backup and Temporary Files ###
-*.bak
-*.swp
-*~
-.DS_Store
+/data/
+/db/
+/logs/
