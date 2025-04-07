@@ -38,10 +38,11 @@ build/
 ### VS Code ###
 .vscode/
 
+### Compiled Files ###
 *.class
 
+### Backup and Temporary Files ###
 *.bak
 *.swp
 *~
-
 .DS_Store
